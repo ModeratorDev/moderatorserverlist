@@ -6,7 +6,7 @@ class Eval extends Command {
   constructor (client) {
     super(client, {
       name: "eval",
-      description: "Evaluates arbitrary Javascript.",
+      description: "Evalua un codigo de javaScript.",
       category: "System",
       usage: "<expression>",
       aliases: ["evaluate"],
@@ -21,12 +21,12 @@ class Eval extends Command {
       .setFooter(message.author.username, message.author.avatarURL())
     const query = args.join(' ')
     if (query) {
-      const code = (lang, code) => (`\`\`\`${lang}\n${String(code).slice(0, 1000) + (code.length >= 1000 ? '...' : '')}\n\`\`\``).replace(client.token,"Really...? I'm not going to give you my token...")
+      const code = (lang, code) => (`\`\`\`${lang}\n${String(code).slice(0, 1000) + (code.length >= 1000 ? '...' : '')}\n\`\`\``).replace(client.token,"En realidad...? No te voy a dar mi token ...")
       try {
         const evald = eval(query)
         const res = (typeof evald === 'string' ? evald : inspect(evald, { depth: 0 }))
         embed.addField('Result', code('js', res))
-          .addField('Type', code('css', typeof evald === 'undefined' ? 'Unknown' : typeof evald))
+          .addField('Tipo', code('css', typeof evald === 'undefined' ? 'Unknown' : typeof evald))
           .setColor('#8fff8d')
       } catch (err) {
         embed.addField('Error', code('js', err))
@@ -37,9 +37,9 @@ class Eval extends Command {
           })
       }
     } else {
-      message.channel.send('Attempting to evaluate nothing.....')
-      message.channel.send('I got nothing...')
-      message.channel.send('Maybe... Yah know... Try telling me something to evaluate next time?')
+      message.channel.send('Intentando no evaluar nada .....')
+      message.channel.send('No tengo nada...')
+      message.channel.send('Tal vez ... Ya sabes ... ¿Intenta decirme algo para evaluar la próxima vez?')
     }
   }
 }

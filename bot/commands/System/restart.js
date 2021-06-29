@@ -5,7 +5,7 @@ class RestartCMD extends Command {
     constructor (client) {
       super(client, {
         name: "restart",
-        description: "Restarts the bot",
+        description: "Reinicia el bot.",
         category: "System",
         usage: "",
         aliases: ['reboot'],
@@ -15,8 +15,8 @@ class RestartCMD extends Command {
 
     async run (client, message, args, MessageEmbed) {
       await client.database.reboot.ensure();
-      const em = new MessageEmbed().setColor('#ff0000').setTitle("System Rebooting").setFooter("All Void Bots services will go down temporarily!!").setDescription("Cya later! I'll be back after I get milk!");
-      await console.log(colors.red(`\n-- System Rebooting -- `) + colors.yellow(message.author.tag) + colors.red(` --\n`))
+      const em = new MessageEmbed().setColor('#ff0000').setTitle("Reinicio del sistema").setFooter("¡Todos los servicios de Void Bots dejarán de funcionar temporalmente!").setDescription("Cya later! I'll be back after I get milk!");
+      await console.log(colors.red(`\n-- Reinicio del sistema -- `) + colors.yellow(message.author.tag) + colors.red(` --\n`))
       await message.channel.send(em).then(async (m) => {
           await client.database.reboot.update({ rebooted: true, channelid: m.channel.id, messageid: m.id, ranuser: message.author.tag });
       });

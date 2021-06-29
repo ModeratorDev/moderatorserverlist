@@ -4,7 +4,7 @@ class ExecuteCMD extends Command {
     constructor (client) {
       super(client, {
         name: "execute",
-        description: "Execute a console command. (Command Line Commands)",
+        description: "Ejecute un comando de consola. (Comandos de la línea de comandos).",
         category: "System",
         usage: "<console command>",
         aliases: ['exec'],
@@ -14,9 +14,9 @@ class ExecuteCMD extends Command {
     }
 
     async run (client, message, args, MessageEmbed) {
-      if(!args.join(' ')) return message.reply('Please input a console command.');
+      if(!args.join(' ')) return message.reply('Ingrese un comando de consola.');
       let result = require('child_process').execSync(args.join(' ')).toString();
-      const e = new MessageEmbed().addField('Result', `\`\`\`js\n${result.slice(0, 2000)}\`\`\``).setFooter(message.author.username, message.author.avatarURL()).setColor('GREEN');
+      const e = new MessageEmbed().addField('Resultado', `\`\`\`js\n${result.slice(0, 2000)}\`\`\``).setFooter(message.author.username, message.author.avatarURL()).setColor('GREEN');
       message.channel.send(e);
     }
 }
