@@ -33,13 +33,13 @@
     </div>
     <div class="seeme col-sm-10 sinfo">
       <% if (category === "bumped") { %>
-        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Recently Bumped</span><br />You are currently browsing the most recently bumped servers.</p>
+        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Recientemente Bumpeado</span><br />Actualmente está navegando por los servidores con errores más recientes.</p>
       <% } else if (category === "added") { %>
-        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Recently Added</span><br />You are currently browsing the most recently added servers.</p>
+        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Recientemente añadido</span><br />Actualmente está explorando los servidores agregados más recientemente.</p>
       <% } else if (category === "members") { %>
-        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Most Members</span><br />You are currently browsing the servers with the highest member count.</p>
+        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">La mayoría de los miembros</span><br />Actualmente está navegando por los servidores con el mayor número de miembros.</p>
       <% } else { %>
-        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;"><%= category.toProperCase() %> Discord Servers</span><br />You are currently browsing all servers</p>
+        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;"><%= category.toProperCase() %> Discord Servers</span><br />Actualmente estás navegando por todos los servidores</p>
       <% } %>
     </div>
   </div>
@@ -52,8 +52,8 @@
       <div class="card">
         <div class="card-block">
           <img class="card-img-top" src="https://discord.mx/da7qc.png" width="50px" style="width:128px; height:128px; background-color:#F6F6F6; border-radius:50%;" alt="">
-          <h4 class="card-title">No Servers</h4>
-          <p class="card-text">No servers selected this category.</p>
+          <h4 class="card-title">Sin servidores</h4>
+          <p class="card-text">Ningún servidor seleccionó esta categoría.</p>
         </div>
         <div class="card-footer">
           <a class="btn btn-secondary btn-sm btn-block disabled" href="#" role="button">Add Server</a>
@@ -84,8 +84,8 @@
       <p class="card-text"><%= (i.description).slice(0, 55) %><%= (i.description).length > 55 ? "..." : "" %></p>
     </div>
     <div class="card-footer">
-      <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Join</a>
-      <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">View Page</a>
+      <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Unirse</a>
+      <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Ver Pagina</a>
     </div>
   </div>
   </div>
