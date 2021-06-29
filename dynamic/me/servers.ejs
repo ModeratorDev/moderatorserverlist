@@ -11,7 +11,7 @@
       <p id="bigytxt" class="bigyimg" style="font-size:88px;"><i class="fas fa-server"></i></p>
     </div>
     <div class="seeme col-sm-10 sinfo">
-      <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Your Servers</span><br />Below is a list of servers that you have access to.</p>
+      <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Sus servidores</span><br />A continuación se muestra una lista de servidores a los que tiene acceso.</p>
     </div>
   </div>
   </div>
@@ -24,11 +24,11 @@
       <div class="card">
         <div class="card-block">
           <img class="card-img-top" src="https://discord.mx/da7qc.png" width="50px" style="width:128px; height:128px; background-color:#F6F6F6; border-radius:50%;" alt="">
-          <h4 class="card-title">No Servers</h4>
-          <p class="card-text">You have no servers.</p>
+          <h4 class="card-title">Sin servidores</h4>
+          <p class="card-text">No tienes servidores.</p>
         </div>
         <div class="card-footer">
-          <a class="btn btn-secondary btn-sm btn-block" href="/server/add" role="button">Add Server</a>
+          <a class="btn btn-secondary btn-sm btn-block" href="/server/add" role="button">Añadir Servidor</a>
         </div>
         </div>
       </div>
@@ -57,8 +57,8 @@
       <p class="card-text"><%= i.description.length > 55 ? `${i.description.slice(0,55)}...` : i.description %></p>
     </div>
     <div class="card-footer">
-      <a class="btn btn-info btn-sm btn-block" href="/server/<%= i.guildid %>/edit" role="button">Edit</a>
-      <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">View Page</a>
+      <a class="btn btn-info btn-sm btn-block" href="/server/<%= i.guildid %>/edit" role="button">Editar</a>
+      <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Ver Pagina</a>
     </div>
   </div>
   </div>
