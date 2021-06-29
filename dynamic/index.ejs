@@ -4,20 +4,20 @@
   <meta property="og:type" content="website" />
   <meta property="og:description" content="¡Da a conocer tu servidor! ¡Obtenga una URL personalizada gratuita para su servidor!" />
   <meta name="description" content="¡Da a conocer tu servidor! ¡Obtenga una URL personalizada gratuita para su servidor!" />
-  <meta name="og:image" content="https://discord.mx/Hp0Pvhim8I.jpg" /> <!-- https://discord.mx/ja5f0.png -->
+  <meta name="og:image" content="https://media.discordapp.net/attachments/576078949852119051/859392052059439104/Diseno_sin_titulo_13_1.png?width=845&height=676" /> <!-- https://discord.mx/ja5f0.png -->
   <meta name="theme-color" content="#91235F" />
-<title>Void Servers</title>
+<title>Cooky Servers</title>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Cooky Server List">
   <meta name="twitter:description" content="¡Da a conocer tu servidor! ¡Obtenga una URL personalizada gratuita para su servidor!">
-  <meta name="twitter:image" content="https://discord.mx/Hp0Pvhim8I.jpg">
+  <meta name="twitter:image" content="https://media.discordapp.net/attachments/576078949852119051/859392052059439104/Diseno_sin_titulo_13_1.png?width=845&height=676">
 <%- include('./blocks/header') %>
 </head>
 <body>
   <div class="bigthingy row">
   <div class="seeme col-md-8 offset-md-2 row">
     <div class="seeme col-sm-2 sinfo">
-      <p id="bigytxt" class="bigyimg"><img src="https://voidbots.net/assets/img/logo_white.png" style="width:88px; border-radius:50%;"/></p>
+      <p id="bigytxt" class="bigyimg"><img src="https://media.discordapp.net/attachments/576078949852119051/859392052059439104/Diseno_sin_titulo_13_1.png?width=845&height=676" style="width:88px; border-radius:50%;"/></p>
     </div>
     <div class="seeme col-sm-10 sinfo">
       <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Cooky Server List</span><br /><span class="typed"></span></p>
@@ -30,15 +30,15 @@
 <div class="container">
   <div class="d-flex align-items-center pt-3 pb-3 my-3 section-head">
       <div class="lh-100">
-        <h4 class="mb-0 lh-100">Recently Bumped</h4>
-        <p class="mt-1 text-muted">Below are the most recently bumped servers!</p>
+        <h4 class="mb-0 lh-100">Recientemente golpeado</h4>
+        <p class="mt-1 text-muted">¡A continuación se muestran los servidores con errores más recientes!</p>
       </div>
-      <div class="ml-auto p-2"><a href="/list/bumped" class="btn btn-secondary btn-servers">More <spoan class="mobile-hide">Servers</spoan></a></div>
+      <div class="ml-auto p-2"><a href="/list/bumped" class="btn btn-secondary btn-servers">Mas <spoan class="mobile-hide">Servidores</spoan></a></div>
     </div>
   <div class="row">
 <% let cards = servers.sort((a, b) => b.lastbumped - a.lastbumped).slice(0, 8)
 if (cards.length === 0) { %>
-          <br> No bots found.
+          <br> No se ha encontrado servidores.
           <% } else { %>
             <% for(let i of cards) { %>
               <div class="col-xs-12 col-md-6 col-lg-3">
@@ -65,9 +65,9 @@ if (cards.length === 0) { %>
     <p class="card-text"><%= (i.description).slice(0, 55) %><%= (i.description).length > 55 ? "..." : "" %></p>
   </div>
   <div class="card-footer">
-    <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Join</a>
+    <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Unirse</a>
     <!--<a class="btn btn-info btn-sm btn-block" href="/server/<%= i.guildid %>/bump" role="button">Bump</a>-->
-    <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Learn More</a>
+    <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Ver informacion</a>
   </div>
 </div>
 </div>
@@ -77,15 +77,15 @@ if (cards.length === 0) { %>
 <br /><br />
 <div class="d-flex align-items-center pt-3 pb-3 my-3 section-head">
     <div class="lh-100">
-      <h4 class="mb-0 lh-100">Recently Added</h4>
-      <p class="mt-1 text-muted">Below are the most recently added servers!</p>
+      <h4 class="mb-0 lh-100">Recientemente añadido</h4>
+      <p class="mt-1 text-muted">¡A continuación se muestran los servidores agregados más recientemente!</p>
     </div>
-    <div class="ml-auto p-2"><a href="/list/added" class="btn btn-secondary btn-servers">More <spoan class="mobile-hide">Servers</spoan></a></div>
+    <div class="ml-auto p-2"><a href="/list/added" class="btn btn-secondary btn-servers">Mas <spoan class="mobile-hide">Servidores</spoan></a></div>
   </div>
 <div class="row">
 <% cards = servers.sort((a, b) => b.addedAt - a.addedAt).slice(0, 8)
 if (cards.length === 0) { %>
-        <br> No bots found.
+        <br> No se ha encontrado servidores.
         <% } else { %>
           <% for(let i of cards) { %>
             <div class="col-xs-12 col-md-6 col-lg-3">
@@ -111,9 +111,9 @@ if (cards.length === 0) { %>
   <p class="card-text"><%= (i.description).slice(0, 55) %><%= (i.description).length > 55 ? "..." : "" %></p>
 </div>
 <div class="card-footer">
-  <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Join</a>
+  <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Unirse</a>
   <!--<a class="btn btn-info btn-sm btn-block" href="/server/<%= i.guildid %>/bump" role="button">Bump</a>-->
-  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Learn More</a>
+  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Mas informacion</a>
 </div>
 </div>
 </div>
@@ -123,15 +123,15 @@ if (cards.length === 0) { %>
 <br /><br />
 <div class="d-flex align-items-center pt-3 pb-3 my-3 section-head">
     <div class="lh-100">
-      <h4 class="mb-0 lh-100">Most Members</h4>
-      <p class="mt-1 text-muted">Below are the servers with the highest member count!</p>
+      <h4 class="mb-0 lh-100">La mayoría de los miembros</h4>
+      <p class="mt-1 text-muted">¡A continuación se muestran los servidores con el mayor número de miembros!</p>
     </div>
-    <div class="ml-auto p-2"><a href="/list/members" class="btn btn-secondary btn-servers">More <spoan class="mobile-hide">Servers</spoan></a></div>
+    <div class="ml-auto p-2"><a href="/list/members" class="btn btn-secondary btn-servers">Mas <spoan class="mobile-hide">Servidores</spoan></a></div>
   </div>
 <div class="row">
 <% cards = servers.sort((a, b) => bot.guilds.cache.get(b.guildid).members.cache.size - bot.guilds.cache.get(a.guildid).members.cache.size).slice(0, 8)
 if (cards.length === 0) { %>
-        <br> No bots found.
+        <br> No se ha encontrado servidores.
         <% } else { %>
           <% for(let i of cards) { %>
             <div class="col-xs-12 col-md-6 col-lg-3">
@@ -157,9 +157,9 @@ if (cards.length === 0) { %>
   <p class="card-text"><%= (i.description).slice(0, 55) %><%= (i.description).length > 55 ? "..." : "" %></p>
 </div>
 <div class="card-footer">
-  <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Join</a>
+  <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Unirse</a>
   <!--<a class="btn btn-info btn-sm btn-block" href="/server/<%= i.guildid %>/bump" role="button">Bump</a>-->
-  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Learn More</a>
+  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Mas informacion</a>
 </div>
 </div>
 </div>
