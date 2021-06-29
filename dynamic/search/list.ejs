@@ -96,8 +96,8 @@
   <center>
   <div id="pagenation">
   <p>Page <strong><%= page %></strong> of <strong><%= maxpages %></strong></p>
-  <a style="display: inline-block;" href="/list/<%= category %>/<%= (page-1) != 0 ? `?page=${page-1}` : '' %>" class="btn btn-dark btn-block"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</a>
-  <a style="display: inline-block;" href="/list/<%= category %>/?page=<%= page+1 %>" class="btn btn-dark btn-block">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  <a style="display: inline-block;" href="/list/<%= category %>/<%= (page-1) != 0 ? `?page=${page-1}` : '' %>" class="btn btn-dark btn-block"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</a>
+  <a style="display: inline-block;" href="/list/<%= category %>/?page=<%= page+1 %>" class="btn btn-dark btn-block">Siguiente <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   <div>
 
   </center>

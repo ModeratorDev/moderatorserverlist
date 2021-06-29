@@ -11,7 +11,7 @@
       <p id="bigytxt" class="bigyimg" style="font-size:88px;"><i class="fas fa-search"></i></p>
     </div>
     <div class="seeme col-sm-10 sinfo">
-        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Search</span><br />You are currently browsing all servers.</p>
+        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Buscar</span><br />Actualmente estás navegando por todos los servidores.</p>
     </div>
   </div>
   </div>
@@ -21,9 +21,9 @@
   <div class="form-row">
     <div class="col">
       <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for servers..." value="<%= search %>" autocomplete="off" id="q" name="q">
+      <input type="text" class="form-control" placeholder="Buscar servidores ..." value="<%= search %>" autocomplete="off" id="q" name="q">
       <div class="input-group-append">
-    <button class="btn btn-info" type="submit">Search</button>
+    <button class="btn btn-info" type="submit">Buscar</button>
   </div>
 </div>
     </div>
@@ -39,11 +39,11 @@
       <div class="card">
         <div class="card-block">
           <br /><br />
-          <h4 class="card-title">No Servers</h4>
-          <p class="card-text">No servers selected this category.</p>
+          <h4 class="card-title">Sin servidores</h4>
+          <p class="card-text">Ningún servidor seleccionó esta categoría.</p>
         </div>
         <div class="card-footer">
-          <a class="btn btn-secondary btn-sm btn-block" href="/me/add" role="button">Add Server</a>
+          <a class="btn btn-secondary btn-sm btn-block" href="/me/add" role="button">Añadir Servidor</a>
         </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
   <center>
   <div id="pagenation">
   <p>Page <strong><%= page %></strong> of <strong><%= maxpages %></strong></p>
-  <a style="display: inline-block;" href="/search/?q=<%= search %><%= (page-1) != 0 ? `&page=${page-1}` : '' %>" class="btn btn-secondary btn-block"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</a>
+  <a style="display: inline-block;" href="/search/?q=<%= search %><%= (page-1) != 0 ? `&page=${page-1}` : '' %>" class="btn btn-secondary btn-block"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</a>
   <a style="display: inline-block;" href="/search/?q=<%= search %>&page=<%= page+1 %>" class="btn btn-secondary btn-block">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   <div>
   </center>
