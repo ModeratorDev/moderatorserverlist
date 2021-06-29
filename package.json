@@ -1,7 +1,7 @@
 {
-  "name": "voidservers",
+  "name": "CookyServers",
   "version": "1.0.0",
-  "description": "A discord server list made by TheVoid.",
+  "description": "A discord server list made by CookyServers.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
