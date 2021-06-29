@@ -3,5 +3,5 @@ models
 public
 routes
 structures
-
+dynamic
 index.js
