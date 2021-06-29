@@ -17,23 +17,23 @@ class BumpCMD extends Command {
         const embed = new MessageEmbed()
           .setColor('PURPLE')
           .setFooter(message.author.username, message.author.avatarURL())
-            .setTitle(`Void Servers » Bump`)
+            .setTitle(`Cooky Servers » Bump`)
         
         let server = await Servers.findOne({guildid: message.guild.id}, { _id: false })
         if(!server) { 
-            embed.setDescription('An error occured, please contact a site administator.')
+            embed.setDescription('Se produjo un error, comuníquese con un administrador del sitio.')
             return message.channel.send(embed);
         }
         
         const timeremain = getTimeRemaining(server.lastbumped)
 		      if(timeremain.days == 0) 
             if(timeremain.hours < 2) {
-                embed.setDescription(`Too early! Please come back in \n${1-timeremain.hours} hours, ${59-timeremain.minutes} minutes, ${60-timeremain.seconds} seconds.`)
+                embed.setDescription(`¡Demasiado temprano! Por favor regresa \n${1-timeremain.hours} horas, ${59-timeremain.minutes} minutos, ${60-timeremain.seconds} segundps.`)
                 return message.channel.send(embed)
             }
         await Servers.updateOne({ guildid: server.guildid }, {$set: { lastbumped: new Date(Date.parse(new Date())) } })
         
-        embed.setDescription('Successfully bumped!')
+        embed.setDescription('¡Golpeado con éxito!')
         message.channel.send(embed);
     }
 }

@@ -15,7 +15,7 @@ class RestartCMD extends Command {
 
     async run (client, message, args, MessageEmbed) {
       await client.database.reboot.ensure();
-      const em = new MessageEmbed().setColor('#ff0000').setTitle("Reinicio del sistema").setFooter("¡Todos los servicios de Void Bots dejarán de funcionar temporalmente!").setDescription("Cya later! I'll be back after I get milk!");
+      const em = new MessageEmbed().setColor('#ff0000').setTitle("Reinicio del sistema").setFooter("El reinicio durara poco.").setDescription("¡Te veo después! ¡Regresaré después de obtener leche!");
       await console.log(colors.red(`\n-- Reinicio del sistema -- `) + colors.yellow(message.author.tag) + colors.red(` --\n`))
       await message.channel.send(em).then(async (m) => {
           await client.database.reboot.update({ rebooted: true, channelid: m.channel.id, messageid: m.id, ranuser: message.author.tag });

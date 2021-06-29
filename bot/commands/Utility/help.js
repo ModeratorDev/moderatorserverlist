@@ -16,7 +16,7 @@ class HelpCMD extends Command {
         const level = client.permLevel(message);
         const embed = new MessageEmbed()
         .setColor('LUMINOUS_VIVID_PINK')
-        .setFooter(`${message.author.username} • Use ${process.env.PREFIX}help <command> for command details.`, message.author.avatarURL());
+        .setFooter(`${message.author.username} • Usa ${process.env.PREFIX}help <comando> para ver detalladamente el comando..`, message.author.avatarURL());
       // If args[0] then show the command's information.
     if (!args[0]) {
       // Filter all commands by which are available for the user's level, using the <Collection>.filter() method.
