@@ -12,19 +12,23 @@ module.exports = class extends Event {
   }
 
   async run (client, guild) {
+
     await Servers({ guildid: guild.id, description: `${guild.name}'s Description'`, long: `# ${guild.name}` }).save();
 
-    // Log guild join
+try {
     const e = new MessageEmbed()
       .setTitle(guild.name)
       .setThumbnail(guild.iconURL())
       .setColor('GREEN')
       .addField('Owner', `${guild.owner.user.tag} \`(${guild.owner.user.id})\``, true)
-      .addField('Member Count', guild.members.cache.size, true)
+      .addField('Miembros', guild.members.cache.size, true)
       .addField('\u200b', '\u200b', true)
       .addField('Guild ID', guild.id, true)
-      .addField('Created At', moment(guild.createdAt).format("LLL"), true)
+      .addField('Creado el', moment(guild.createdAt).format("LLL"), true)
     client.channels.cache.get(process.env.GUILD_LOG).send(e);
     client.logger.log(`[GUILD JOIN] ${guild.name} (${guild.id}) added the bot. Owner: ${guild.owner.user.tag} (${guild.owner.user.id})`);
+  }catch (err) {
+console.trace(err)
   }
+}
 };

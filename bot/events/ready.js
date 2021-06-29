@@ -55,9 +55,9 @@ try {
     let aaa = await client.database.reboot.get();
     if(client.channels.cache.get(process.env.BOT_LOGS)){
       if (aaa.rebooted == "true") {
-        client.channels.cache.get(process.env.BOT_LOGS).send(`**The bot has been restarted by** \`User: ${aaa.ranuser}\`**!**`);
+        client.channels.cache.get(process.env.BOT_LOGS).send(`**El bot se ha reseteado** \`Usuario: ${aaa.ranuser}\`**!**`);
       } else {
-        client.channels.cache.get(process.env.BOT_LOGS).send(`**The bot has been restarted by** \`Unknown\`**!**`);
+        client.channels.cache.get(process.env.BOT_LOGS).send(`**El bot se ha reseteado** \`Unknown\`**!**`);
       }
     }
 
