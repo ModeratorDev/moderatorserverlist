@@ -84,7 +84,7 @@
   <div id="pagenation">
   <p>Page <strong><%= page %></strong> of <strong><%= maxpages %></strong></p>
   <a style="display: inline-block;" href="/search/?q=<%= search %><%= (page-1) != 0 ? `&page=${page-1}` : '' %>" class="btn btn-secondary btn-block"><i class="fa fa-arrow-left" aria-hidden="true"></i> Volver</a>
-  <a style="display: inline-block;" href="/search/?q=<%= search %>&page=<%= page+1 %>" class="btn btn-secondary btn-block">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+  <a style="display: inline-block;" href="/search/?q=<%= search %>&page=<%= page+1 %>" class="btn btn-secondary btn-block">Siguiente <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
   <div>
   </center>
   <%- include('../blocks/footer') %>
