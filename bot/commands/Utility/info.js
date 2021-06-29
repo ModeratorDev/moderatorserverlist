@@ -6,7 +6,7 @@ class InfoCMD extends Command {
     constructor (client) {
       super(client, {
         name: "info",
-        description: "Get information about a server.",
+        description: "Obtener información sobre un servidor.",
         category: "Utility",
         usage: "[server name/server_id]",
         aliases: ['si', 'serinfo', 'serverinfo'],
@@ -35,7 +35,7 @@ class InfoCMD extends Command {
         if (!dbInfo) {
           const e = new MessageEmbed()
             .setColor('RED')
-            .setDescription('That guild is not in our dB. Contact a site admin.')
+            .setDescription('Ese gremio no está en nuestro dB. Póngase en contacto con un administrador del sitio.')
           return message.channel.send(e);
         }
 

@@ -5,7 +5,7 @@ class BumpCMD extends Command {
     constructor (client) {
       super(client, {
         name: "bump",
-        description: "Bump the server higher on the list.",
+        description: "Bumpea un servidor.",
         category: "Utility",
         usage: "",
         aliases: ["bumpserver", "serverbump"],

@@ -4,7 +4,7 @@ class HelpCMD extends Command {
     constructor (client) {
       super(client, {
         name: "help",
-        description: "Shows the commands in the bot.",
+        description: "Muestra los comandos en el bot.",
         category: "Utility",
         usage: "[command]",
         aliases: [],
@@ -52,7 +52,7 @@ class HelpCMD extends Command {
 
       embed
       	.setTitle(`Void Servers » Help`)
-        .setDescription(`I am a bot for Void Servers (https://voidlist.xyz) :robot:`)
+        .setDescription(`Soy un bot: Cooky Servers (https://cooky-servers.glitch.me) :robot:`)
         .addField('Commands', output.join('\n'))
       message.channel.send(embed);
     } else {
@@ -63,8 +63,8 @@ class HelpCMD extends Command {
           output.push(`\`${process.env.PREFIX}${cmd.help.name}${cmd.help.usage ? ' ' : ''}${cmd.help.usage}\` - ${cmd.help.description}`)
         });
         embed
-        	.setTitle(`Void Servers » Help (Developers)`)
-          .setDescription(`I am a bot for Void Servers (https://voidlist.xyz) :robot:`)
+        	.setTitle(`Cooky Servers » Help (Developers)`)
+          .setDescription(`Soy un bot: Cooky Servers (https://cooky-servers.glitch.me) :robot:`)
           .addField('Commands', output.join('\n'))
         message.channel.send(embed);
       }

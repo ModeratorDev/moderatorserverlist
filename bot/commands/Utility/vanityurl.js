@@ -4,7 +4,7 @@ class PageCMD extends Command {
     constructor (client) {
       super(client, {
         name: "page",
-        description: "Get server page link",
+        description: "Obtener el enlace de la página del servidor.",
         category: "Utility",
         usage: "[command]",
         aliases: ["guild", "link", "guildlink"],
@@ -16,7 +16,7 @@ class PageCMD extends Command {
 		const embed = new MessageEmbed()
         	.setColor('PURPLE')
         	.setFooter(message.author.username, message.author.avatarURL())
-            .setTitle(`Void Servers » Guild Link`)
+            .setTitle(`Cooky Servers » Servidor Link`)
             .setDescription(`${process.env.DOMAIN}/server/${message.guild.id}`)
         message.channel.send(embed);
     }
