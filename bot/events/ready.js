@@ -29,8 +29,8 @@ module.exports = class extends Event {
     console.log(` `);
     console.log(` `);
     console.log(colors.grey(`---------------------------------------------------`));
-    console.log(colors.yellow(`VoidServers was Created by `) + colors.underline.green(`DanPlayz`) + colors.yellow(` and `) + colors.underline.green(`AshMW`));
-    console.log(colors.yellow(`Connected to the `) + colors.underline.green(`VoidServers`) +colors.yellow(` database`)); // "on colors.underline.green(MONGO_DB_URL)"
+    console.log(colors.yellow(`CookyServers was Created by `) + colors.underline.green(`DanPlayz`) + colors.yellow(` and `) + colors.underline.green(`AshMW`));
+    console.log(colors.yellow(`Connected to the `) + colors.underline.green(`CookyServers`) +colors.yellow(` database`)); // "on colors.underline.green(MONGO_DB_URL)"
     console.log(colors.yellow(`Successfully logged into `) + colors.underline.green(client.user.tag));
 
 
@@ -43,7 +43,7 @@ module.exports = class extends Event {
 
     function setActivity() {
       //client.user.setActivity(, {type: "WATCHING", status: "dnd"});
-	    client.user.setPresence({ status: 'dnd', activity: { name: `over ${client.guilds.cache.size} servers | vs.help | www.VoidList.xyz`, type: 'WATCHING'}})
+	    client.user.setPresence({ status: 'dnd', activity: { name: `over ${client.guilds.cache.size} servers | cs.help | https://cooky-servers.glitch.me`, type: 'WATCHING'}})
       // client.user.setPresence({ status: 'dnd', activity: { name: `my developers build me! (Coming soon)`, type: 'WATCHING'}})
     };
 
