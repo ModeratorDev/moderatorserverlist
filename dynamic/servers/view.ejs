@@ -23,7 +23,7 @@
 <body ng-app="app" ng-controller="ctrl">
   <%- include('../blocks/guildtop', { bot, user, guild }) %>
    <div class="container mt-3" style="cursor:default;">
-     <div class="alert alert-success" id="vanitytxt" style="display:none;">Successfully copied <b>https://cookyserbers.xyz/<%= server.vanity.code %></b> a tu portapapeles!</div>
+     <div class="alert alert-success" id="vanitytxt" style="display:none;">Successfully copied <b>https://moderatorservers.glitch.me/<%= server.vanity.code %></b> a tu portapapeles!</div>
      <div class="alert alert-success alert-dismissible fade show" id="edited" style="display:none;">¡Actualizó con éxito la página de su servidor! <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="outline:none;"><span aria-hidden="true"><i class="fas fa-times"></i></span></button></div>
   <div class="row">
     <div class="col-md-4">
@@ -51,7 +51,7 @@
                 <% }) %>
             </li>
         <% } %>
-        <%- server.vanity.code ? `<li class="list-group-item"><strong>Vanity:</strong> <a href="javascript:copyTXT()"><span data-toggle="tooltip" title="Click para copiar!" class="badge badge-dark">cookyservers.xyz/${server.vanity.code}</span></a></li>` : '' %>
+        <%- server.vanity.code ? `<li class="list-group-item"><strong>Vanity:</strong> <a href="javascript:copyTXT()"><span data-toggle="tooltip" title="Click para copiar!" class="badge badge-dark">moderatorservers.glitch.me/${server.vanity.code}</span></a></li>` : '' %>
         <li class="list-group-item"><strong>Last Bumped:</strong> <span data-toggle="tooltip" title="<%= moment(server.lastbumped).format('LLL') %> UTC"><%= moment(server.lastbumped).fromNow() %></span></li>
         <li class="list-group-item"><a class="btn btn-success btn-block" href="/server/<%= guild.id %>/join">Join</a><%- isManaged ? `<div class="btn-group" style="width:100%; padding-top:8px;"><a class="btn btn-info" style="width:50%;" href="/server/${guild.id}/bump">Bump</a> <a class="btn btn-secondary" style="width:50%;" href="/server/${guild.id}/edit">Edit</a></div>` : `<a class="btn btn-info btn-block" href="/server/${guild.id}/bump">Bump</a>` %></li>
       </ul>
@@ -130,8 +130,8 @@
     </div>
   </div>
 </div>
-<input style="opacity:0; bottom:0; left:-10000; position:relative;" id="vanity" value="https://cookyservers.xyz/<%= server.vanity.code %>" type="text"></input>
-<div id="succ"><p><b>Copied Vanity Link!</b></p><p id="thecopiedlink">https://cookyservers.xyz/<%= server.vanity.code %></p></div>
+<input style="opacity:0; bottom:0; left:-10000; position:relative;" id="vanity" value="https://moderatorservers.glitch.me/<%= server.vanity.code %>" type="text"></input>
+<div id="succ"><p><b>Copied Vanity Link!</b></p><p id="thecopiedlink">https://moderatorservers.glitch.me/<%= server.vanity.code %></p></div>
 <script>
 function copyTXT() {
     var popup = document.getElementById("succ");
