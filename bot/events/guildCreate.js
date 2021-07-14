@@ -11,7 +11,7 @@ module.exports = class extends Event {
     });
   }
 
-  async run (client, guild) {
+  async run (client, guild, user) {
 
     await Servers({ guildid: guild.id, description: `${guild.name}'s Description'`, long: `# ${guild.name}` }).save();
 
