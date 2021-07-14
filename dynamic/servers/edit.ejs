@@ -92,8 +92,8 @@
         </div>
 
       <div class="form-group" id="tags-box" style="webkit-user-select: none; -ms-user-select: none; user-select: none;">
-        <label class="mb-0" data-toggle="tooltip" title="Categorize your server by keywords (e.g. game title)"><strong>Categorias</strong></label>
-        <small class="form-text text-muted mt-0 mb-2">Selecciona 6 tags maximo!</small>
+        <label class="mb-0" data-toggle="tooltip" title="Categorize your server by keywords (e.g. game title)"><strong>Categories</strong></label>
+        <small class="form-text text-muted mt-0 mb-2">Select 6 tags maximum!</small>
         <% categories.forEach((c,i) => { %>
         <div class="form-check form-check-inline" style="width:150px;">
             <input type="checkbox" class="form-check-input" id="tag-<%= c %>" value="<%= c %>" name="tag" <%= server.categories.includes(c) ? 'checked' : '' %>>
@@ -122,7 +122,7 @@
 
   <div class="col-md-8 offset-md-2" style="margin-top:50px; margin-bottom:200px;">
 <div class="card mb-8">
-<div class="card-header"><h5 style="padding:0;margin:0;">Vanity URL</h5><p style="padding:0;margin:0;">¡Crea tu propio enlace personalizado para tu servidor de Discord!</p></div>
+<div class="card-header"><h5 style="padding:0;margin:0;">Vanity URL</h5><p style="padding:0;margin:0;">Create your own custom link for your Discord server!</p></div>
 <div class="card-body">
 
   <form role="form" id="arooly_cform" class="vanity" method="POST" action="/server/<%= server.guildid %>/edit">
@@ -141,8 +141,8 @@
         <label for="vanityAction"><strong>Action</strong></label>
         <select class="form-control" id="vanityAction" required>
           <option disabled selected>Select One</option>
-          <option value="join" <%= server.vanity.action == "join" ? 'selected' : '' %>>Unirse al servidor</option>
-          <option value="page" <%= server.vanity.action == "page" ? 'selected' : '' %>>Página del servidor</option>
+          <option value="join" <%= server.vanity.action == "join" ? 'selected' : '' %>>Join the server</option>
+          <option value="page" <%= server.vanity.action == "page" ? 'selected' : '' %>>Server page</option>
         </select>
       </div>
 
