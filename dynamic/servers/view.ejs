@@ -30,13 +30,13 @@
       <div class="card mb-3">
   <div class="card-header"><h5><i class="fa fa-info-circle" aria-hidden="true"></i> Server Info</h5></div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Members:</strong> <%= guild.memberCount %> <a data-toggle="collapse" href="#collapseMembers" role="button" aria-expanded="false" class="outlink" aria-controls="collapseMembers"><span data-toggle="tooltip" title="¡Haga clic para mostrar más información!">(More)</span></a></li>
+        <li class="list-group-item"><strong>Members:</strong> <%= guild.memberCount %> <a data-toggle="collapse" href="#collapseMembers" role="button" aria-expanded="false" class="outlink" aria-controls="collapseMembers"><span data-toggle="tooltip" title="Click to show more information!">(More)</span></a></li>
         <div class="collapse" id="collapseMembers" style="border: none;">
         <li class="list-group-item"><strong>Humans:</strong> <%= guild.members.cache.filter(m => !m.user.bot).size %></li>
         <li class="list-group-item"><strong>Bots:</strong> <%= guild.members.cache.filter(m => m.user.bot).size %></li>
         <%- guild.premiumSubscriptionCount != 0 ? `<li class="list-group-item"><strong>Boosters:</strong> ${guild.premiumSubscriptionCount}</li>` : '' %>
         </div>
-        <li class="list-group-item"><strong>Emojis:</strong> <%= guild.emojis.cache.size %> <a data-toggle="collapse" class="outlink" href="#collapseEmojis" role="button" aria-expanded="false" aria-controls="collapseEmojis"><span data-toggle="tooltip" title="¡Haz clic para mostrar todos los emojis!">(Show)</span></a></li>
+        <li class="list-group-item"><strong>Emojis:</strong> <%= guild.emojis.cache.size %> <a data-toggle="collapse" class="outlink" href="#collapseEmojis" role="button" aria-expanded="false" aria-controls="collapseEmojis"><span data-toggle="tooltip" title="Click to show all emojis!">(Show)</span></a></li>
         <div class="collapse" id="collapseEmojis" style="border: 1px solid #DFDFDF;"><li class="list-group-item bg-dark">
         <%- guild.emojis.cache.size == 0 ? `<br /><p class="text-light" style="padding-bottom:10px; text-align:center;">El servidor no tiene emojis</p>` : '' %>
         <% guild.emojis.cache.forEach((e,i) => { %>
