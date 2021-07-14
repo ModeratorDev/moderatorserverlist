@@ -28,7 +28,7 @@ module.exports = class extends Event {
     // Mention related tasks
     const MentionRegex = new RegExp(`^(<@!?${client.user.id}>)`);
     const mentioned = MentionRegex.test(content);
-    const helpPrefix = `Sup, puedes escribir\`${process.env.PREFIX}help\` para ver la lista de comandos!`;
+    const helpPrefix = `Sup, you can write\`${process.env.PREFIX}help\` to see the list of commands!`;
 
     if(!usedPrefix) return; // Exit if its not using a prefix
     const args = message.content.slice(usedPrefix.length).trim().split(/ +/g);
@@ -42,16 +42,16 @@ module.exports = class extends Event {
     if (!cmd && mentioned) return message.channel.send(helpPrefix);
     if (!cmd) return;
 
-    if (cmd && !message.guild && cmd.conf.guildOnly) return message.channel.send("Este comando no está disponible por mensaje privado. Ejecute este comando en un gremio.");
+    if (cmd && !message.guild && cmd.conf.guildOnly) return message.channel.send("This command is not available by private message. Run this command in a guild.");
 
     const level = client.permLevel(message);
     if (level < client.levelCache[cmd.conf.permLevel]) {
       const e = new MessageEmbed()
-        .setTitle('Umm No..')
+        .setTitle('Umm no..')
         .setColor('#2F3136')
-        .setDescription(cmd.conf.permLevel == 'Lock' ? `¡El comando que ingresó está deshabilitado!` : `La última vez que lo comprobé, no eres un **${cmd.conf.permLevel}**...`)
+        .setDescription(cmd.conf.permLevel == 'Lock' ? `The command you entered is disabled!` : `Last time I checked, you are not a **${cmd.conf.permLevel}**...`)
         .setImage('https://discord.mx/TENvu8AirM.gif')
-        .setFooter(cmd.conf.permLevel == 'Lock' ? ``:` Error: INVALID_PERMISSIONS\nErType: Acceso denegado`);
+        .setFooter(cmd.conf.permLevel == 'Lock' ? ``:` Error: INVALID_PERMISSIONS\nErType: Access denied`);
       message.channel.send(e);
       console.log(colors.yellow(`[${client.perms.find(l => l.level === level).name}] `) + colors.red(`${message.author.username} (${message.author.id}) `) + colors.white(`ran unauthorized command "`) + colors.red(`${cmd.help.name} ${args.join(' ')}`) + colors.white(`"`));
       return;
