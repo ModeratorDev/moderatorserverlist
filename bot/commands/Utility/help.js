@@ -51,8 +51,8 @@ class HelpCMD extends Command {
 
 
       embed
-      	.setTitle(`Cooky Servers » Help`)
-        .setDescription(`Soy un bot: Cooky Servers (https://cooky-servers.glitch.me) :robot:`)
+      	.setTitle(`Moderator Servers » Help`)
+        .setDescription(`Soy un bot: Moderator Servers (https://moderatorservers.glitch.me/) :robot:`)
         .addField('Commands', output.join('\n'))
       message.channel.send(embed);
     } else {

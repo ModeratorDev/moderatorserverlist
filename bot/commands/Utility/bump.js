@@ -17,7 +17,7 @@ class BumpCMD extends Command {
         const embed = new MessageEmbed()
           .setColor('PURPLE')
           .setFooter(message.author.username, message.author.avatarURL())
-            .setTitle(`Cooky Servers » Bump`)
+            .setTitle(`Moderator Servers » Bump`)
         
         let server = await Servers.findOne({guildid: message.guild.id}, { _id: false })
         if(!server) { 
