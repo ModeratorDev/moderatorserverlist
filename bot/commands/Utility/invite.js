@@ -14,8 +14,9 @@ class InviteCMD extends Command {
     }
 
     async run (client, message, args, MessageEmbed) {
-        if(!message.guild.me.permissions.has(1)) return message.channel.send('Necesito el permiso `CREATE_INVITE` para este comando.');
-        let selectedchannel = message.mentions.channels.first() || message.channel;
+        let perms = message.member.hasPermission("BAN_MEMBERS") //Verificamos permisos del user
+        if (!perms) return message.channel.send("X | Usted no tiene permisos")
+      let selectedchannel = message.mentions.channels.first() || message.channel;
 
         let invite = await selectedchannel.createInvite({ maxAge: 0, maxUses: 0 }).catch(() => {});
         if(!invite) return message.channel.send(`I could not create an invite to ${selectedchannel}`);
