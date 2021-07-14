@@ -15,7 +15,7 @@ class InfoCMD extends Command {
       });
     }
 
-    async run (client, message, args, MessageEmbed) {
+    async run (client, message, args, MessageEmbed, user) {
         let infoGuild = message.guild;
         if (!args || args.length < 1) {
           infoGuild = message.guild;
@@ -122,7 +122,6 @@ class InfoCMD extends Command {
             .setColor(color)
             .setThumbnail(infoGuild.iconURL({ format: 'png', dynamic: true}))
             .setFooter(message.author.username, message.author.avatarURL())
-            .addField('Owner', infoGuild.owner.user.tag, true)
             .addField(`Created At [${time}]`, `${ca}`, true)
             .addField('\u200b', '\u200b', true)
             .addField(`Last Bumped [${moment(dbInfo.lastbumped).fromNow()}]`, moment(dbInfo.lastbumped).format('LLL'), true)
@@ -134,7 +133,7 @@ class InfoCMD extends Command {
             .addField(`Members [${infoGuild.memberCount}/${infoGuild.maximumMembers}]`, `🧍 ${infoGuild.members.cache.filter(m => !m.user.bot).size} | 🤖 ${infoGuild.members.cache.filter(m => m.user.bot).size} | <a:serverbooster:768156347036074034> ${infoGuild.premiumSubscriptionCount}`, true)
             .addField(`Channels [${infoGuild.channels.cache.size}]`, `⌨️ ${infoGuild.channels.cache.filter(c => c.type == "text").size} | 🔈 ${infoGuild.channels.cache.filter(c => c.type == "voice").size} | 📁 ${infoGuild.channels.cache.filter(c => c.type == "category").size} | 📢 ${infoGuild.channels.cache.filter(c => c.type == "news").size}`, true)
             .addField('\u200b', '\u200b', true)
-            .addField(`Vanity`, dbInfo.vanity.code ? `https://di.scord.xyz/${dbInfo.vanity.code}` : "Not set", true)
+            .addField(`Vanity`, dbInfo.vanity.code ? `https://moderatorservers/${dbInfo.vanity.code}` : "Not set", true)
             .addField(`Boost Level`, `${infoGuild.premiumTier}`, true)
             // .addField('AFK Channel', `${(infoGuild.afkChannel && infoGuild.afkChannel.name) || "Not Set"}`, true)
             // .addField(`Roles (${infoGuild.roles.cache.size.toLocaleString()})`, roles1
