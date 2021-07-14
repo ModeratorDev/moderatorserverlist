@@ -25,7 +25,7 @@ class InviteCMD extends Command {
 		    const embed = new MessageEmbed()
         	.setColor('PURPLE')
         	.setFooter(message.author.username, message.author.avatarURL())
-          .setTitle(`Cooky Servers » Link de Invite`)
+          .setTitle(`Moderator Servers » Link de Invite`)
           .setDescription(`¡Se ha establecido la invitación instantánea!`)
           .addField('Canal', `${selectedchannel}`)
           .addField('Invitación instantánea', `${invite}`)

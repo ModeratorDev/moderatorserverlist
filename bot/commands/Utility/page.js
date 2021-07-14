@@ -16,7 +16,7 @@ class PageCMD extends Command {
 		const embed = new MessageEmbed()
         	.setColor('PURPLE')
         	.setFooter(message.author.username, message.author.avatarURL())
-            .setTitle(`Cooky Servers » Servidor Link`)
+            .setTitle(`Moderator Servers » Servidor Link`)
             .setDescription(`${process.env.DOMAIN}/server/${message.guild.id}`)
         message.channel.send(embed);
     }

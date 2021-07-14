@@ -63,8 +63,8 @@ class HelpCMD extends Command {
           output.push(`\`${process.env.PREFIX}${cmd.help.name}${cmd.help.usage ? ' ' : ''}${cmd.help.usage}\` - ${cmd.help.description}`)
         });
         embed
-        	.setTitle(`Cooky Servers » Help (Developers)`)
-          .setDescription(`Soy un bot: Cooky Servers (https://cooky-servers.glitch.me) :robot:`)
+        	.setTitle(`Moderator Servers » Help (Developers)`)
+          .setDescription(`Soy un bot: Moderator Servers (https://moderatorservers.glitch.me/) :robot:`)
           .addField('Commands', output.join('\n'))
         message.channel.send(embed);
       }
