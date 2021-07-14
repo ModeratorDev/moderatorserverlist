@@ -1,6 +1,6 @@
 /* TEXT HIGHLIGHT COLOR *//* TEXT HIGHLIGHT COLOR */
 ::-moz-selection {
-  color: ;
+  color: #fff;
   background: rgba(160, 40, 105, 1);
 }
 
