@@ -2,14 +2,14 @@
 <head>
   <meta property="og:title" content="Moderator Servers List" />
   <meta property="og:type" content="website" />
-  <meta property="og:description" content="¡Da a conocer tu servidor! ¡Obtenga una URL personalizada gratuita para su servidor!" />
-  <meta name="description" content="¡Da a conocer tu servidor! ¡Obtenga una URL personalizada gratuita para su servidor!" />
+  <meta property="og:description" content="Make your server known! Get a free custom URL for your server!" />
+  <meta name="description" content="Make your server known! Get a free custom URL for your server!" />
   <meta name="og:image" content="https://media.discordapp.net/attachments/839881374201937930/864868127447318528/moderatorserver.png" /> <!-- https://discord.mx/ja5f0.png -->
   <meta name="theme-color" content="#91235F" />
 <title>Moderator Servers</title>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Moderator Server List">
-  <meta name="twitter:description" content="¡Da a conocer tu servidor! ¡Obtenga una URL personalizada gratuita para su servidor!">
+  <meta name="twitter:description" content="Make your server known! Get a free custom URL for your server!">
   <meta name="twitter:image" content="https://media.discordapp.net/attachments/839881374201937930/864868127447318528/moderatorserver.png">
 <%- include('./blocks/header') %>
 </head>
@@ -30,10 +30,10 @@
 <div class="container">
   <div class="d-flex align-items-center pt-3 pb-3 my-3 section-head">
       <div class="lh-100">
-        <h4 class="mb-0 lh-100">Recientemente golpeado</h4>
-        <p class="mt-1 text-muted">¡A continuación se muestran los servidores con errores más recientes!</p>
+        <h4 class="mb-0 lh-100">Recently bump</h4>
+        <p class="mt-1 text-muted">The most recent bump servers are listed below!</p>
       </div>
-      <div class="ml-auto p-2"><a href="/list/bumped" class="btn btn-secondary btn-servers">Mas <spoan class="mobile-hide">Servidores</spoan></a></div>
+      <div class="ml-auto p-2"><a href="/list/bumped" class="btn btn-secondary btn-servers">More <spoan class="mobile-hide">Servidores</spoan></a></div>
     </div>
   <div class="row">
 <% let cards = servers.sort((a, b) => b.lastbumped - a.lastbumped).slice(0, 8)
@@ -80,7 +80,7 @@ if (cards.length === 0) { %>
       <h4 class="mb-0 lh-100">Recientemente añadido</h4>
       <p class="mt-1 text-muted">¡A continuación se muestran los servidores agregados más recientemente!</p>
     </div>
-    <div class="ml-auto p-2"><a href="/list/added" class="btn btn-secondary btn-servers">Mas <spoan class="mobile-hide">Servidores</spoan></a></div>
+    <div class="ml-auto p-2"><a href="/list/added" class="btn btn-secondary btn-servers">More <spoan class="mobile-hide">Server</spoan></a></div>
   </div>
 <div class="row">
 <% cards = servers.sort((a, b) => b.addedAt - a.addedAt).slice(0, 8)
@@ -113,7 +113,7 @@ if (cards.length === 0) { %>
 <div class="card-footer">
   <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Unirse</a>
   <!--<a class="btn btn-info btn-sm btn-block" href="/server/<%= i.guildid %>/bump" role="button">Bump</a>-->
-  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Mas informacion</a>
+  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">More information</a>
 </div>
 </div>
 </div>
@@ -123,10 +123,10 @@ if (cards.length === 0) { %>
 <br /><br />
 <div class="d-flex align-items-center pt-3 pb-3 my-3 section-head">
     <div class="lh-100">
-      <h4 class="mb-0 lh-100">La mayoría de los miembros</h4>
-      <p class="mt-1 text-muted">¡A continuación se muestran los servidores con el mayor número de miembros!</p>
+      <h4 class="mb-0 lh-100">Most of the members</h4>
+      <p class="mt-1 text-muted">Below are the servers with the highest number of members!</p>
     </div>
-    <div class="ml-auto p-2"><a href="/list/members" class="btn btn-secondary btn-servers">Mas <spoan class="mobile-hide">Servidores</spoan></a></div>
+    <div class="ml-auto p-2"><a href="/list/members" class="btn btn-secondary btn-servers">More <spoan class="mobile-hide">Server</spoan></a></div>
   </div>
 <div class="row">
 <% cards = servers.sort((a, b) => bot.guilds.cache.get(b.guildid).members.cache.size - bot.guilds.cache.get(a.guildid).members.cache.size).slice(0, 8)
