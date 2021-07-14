@@ -33,12 +33,12 @@
         <h4 class="mb-0 lh-100">Recently bump</h4>
         <p class="mt-1 text-muted">The most recent bump servers are listed below!</p>
       </div>
-      <div class="ml-auto p-2"><a href="/list/bumped" class="btn btn-secondary btn-servers">More <spoan class="mobile-hide">Servidores</spoan></a></div>
+      <div class="ml-auto p-2"><a href="/list/bumped" class="btn btn-secondary btn-servers">More <spoan class="mobile-hide">Servers</spoan></a></div>
     </div>
   <div class="row">
 <% let cards = servers.sort((a, b) => b.lastbumped - a.lastbumped).slice(0, 8)
 if (cards.length === 0) { %>
-          <br> No se ha encontrado servidores.
+          <br> No servers found.
           <% } else { %>
             <% for(let i of cards) { %>
               <div class="col-xs-12 col-md-6 col-lg-3">
@@ -65,9 +65,9 @@ if (cards.length === 0) { %>
     <p class="card-text"><%= (i.description).slice(0, 55) %><%= (i.description).length > 55 ? "..." : "" %></p>
   </div>
   <div class="card-footer">
-    <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Unirse</a>
+    <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Join</a>
     <!--<a class="btn btn-info btn-sm btn-block" href="/server/<%= i.guildid %>/bump" role="button">Bump</a>-->
-    <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Ver informacion</a>
+    <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">See information</a>
   </div>
 </div>
 </div>
@@ -77,15 +77,15 @@ if (cards.length === 0) { %>
 <br /><br />
 <div class="d-flex align-items-center pt-3 pb-3 my-3 section-head">
     <div class="lh-100">
-      <h4 class="mb-0 lh-100">Recientemente añadido</h4>
-      <p class="mt-1 text-muted">¡A continuación se muestran los servidores agregados más recientemente!</p>
+      <h4 class="mb-0 lh-100">Recently added</h4>
+      <p class="mt-1 text-muted">Below are the most recently added servers!</p>
     </div>
     <div class="ml-auto p-2"><a href="/list/added" class="btn btn-secondary btn-servers">More <spoan class="mobile-hide">Server</spoan></a></div>
   </div>
 <div class="row">
 <% cards = servers.sort((a, b) => b.addedAt - a.addedAt).slice(0, 8)
 if (cards.length === 0) { %>
-        <br> No se ha encontrado servidores.
+        <br> No servers found.
         <% } else { %>
           <% for(let i of cards) { %>
             <div class="col-xs-12 col-md-6 col-lg-3">
@@ -111,9 +111,9 @@ if (cards.length === 0) { %>
   <p class="card-text"><%= (i.description).slice(0, 55) %><%= (i.description).length > 55 ? "..." : "" %></p>
 </div>
 <div class="card-footer">
-  <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Unirse</a>
+  <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Join</a>
   <!--<a class="btn btn-info btn-sm btn-block" href="/server/<%= i.guildid %>/bump" role="button">Bump</a>-->
-  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">More information</a>
+  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">See information</a>
 </div>
 </div>
 </div>
@@ -131,7 +131,7 @@ if (cards.length === 0) { %>
 <div class="row">
 <% cards = servers.sort((a, b) => bot.guilds.cache.get(b.guildid).members.cache.size - bot.guilds.cache.get(a.guildid).members.cache.size).slice(0, 8)
 if (cards.length === 0) { %>
-        <br> No se ha encontrado servidores.
+        <br> No servers found..
         <% } else { %>
           <% for(let i of cards) { %>
             <div class="col-xs-12 col-md-6 col-lg-3">
@@ -157,9 +157,9 @@ if (cards.length === 0) { %>
   <p class="card-text"><%= (i.description).slice(0, 55) %><%= (i.description).length > 55 ? "..." : "" %></p>
 </div>
 <div class="card-footer">
-  <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Unirse</a>
+  <a class="btn btn-success btn-sm btn-block" href="/server/<%= i.guildid %>/join" role="button">Join</a>
   <!--<a class="btn btn-info btn-sm btn-block" href="/server/<%= i.guildid %>/bump" role="button">Bump</a>-->
-  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">Mas informacion</a>
+  <a class="btn btn-secondary btn-sm btn-block" href="/server/<%= i.guildid %>/" role="button">See information</a>
 </div>
 </div>
 </div>

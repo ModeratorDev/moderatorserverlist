@@ -30,9 +30,9 @@
       <div class="card mb-3">
   <div class="card-header"><h5><i class="fa fa-info-circle" aria-hidden="true"></i> Server Info</h5></div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><strong>Miembros:</strong> <%= guild.memberCount %> <a data-toggle="collapse" href="#collapseMembers" role="button" aria-expanded="false" class="outlink" aria-controls="collapseMembers"><span data-toggle="tooltip" title="¡Haga clic para mostrar más información!">(More)</span></a></li>
+        <li class="list-group-item"><strong>Members:</strong> <%= guild.memberCount %> <a data-toggle="collapse" href="#collapseMembers" role="button" aria-expanded="false" class="outlink" aria-controls="collapseMembers"><span data-toggle="tooltip" title="¡Haga clic para mostrar más información!">(More)</span></a></li>
         <div class="collapse" id="collapseMembers" style="border: none;">
-        <li class="list-group-item"><strong>Humanos:</strong> <%= guild.members.cache.filter(m => !m.user.bot).size %></li>
+        <li class="list-group-item"><strong>Humans:</strong> <%= guild.members.cache.filter(m => !m.user.bot).size %></li>
         <li class="list-group-item"><strong>Bots:</strong> <%= guild.members.cache.filter(m => m.user.bot).size %></li>
         <%- guild.premiumSubscriptionCount != 0 ? `<li class="list-group-item"><strong>Boosters:</strong> ${guild.premiumSubscriptionCount}</li>` : '' %>
         </div>

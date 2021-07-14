@@ -33,13 +33,13 @@
     </div>
     <div class="seeme col-sm-10 sinfo">
       <% if (category === "bumped") { %>
-        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Recientemente Bumpeado</span><br />Actualmente está navegando por los servidores con errores más recientes.</p>
+        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Recently Blown</span><br />You are currently browsing the latest buggy servers.</p>
       <% } else if (category === "added") { %>
-        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Recientemente añadido</span><br />Actualmente está explorando los servidores agregados más recientemente.</p>
+        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Recently added</span><br />You are currently browsing the most recently added servers.</p>
       <% } else if (category === "members") { %>
-        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">La mayoría de los miembros</span><br />Actualmente está navegando por los servidores con el mayor número de miembros.</p>
+        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;">Most of the members</span><br />You are currently browsing the servers with the highest number of members.</p>
       <% } else { %>
-        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;"><%= category.toProperCase() %> Discord Servers</span><br />Actualmente estás navegando por todos los servidores</p>
+        <p id="bigytxt"><span style="font-size:25px; font-weight:bold;"><%= category.toProperCase() %> Discord Servers</span><br />You are currently browsing all servers.</p>
       <% } %>
     </div>
   </div>
