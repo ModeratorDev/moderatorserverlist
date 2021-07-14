@@ -14,8 +14,8 @@ class InviteCMD extends Command {
     }
 
     async run (client, message, args, MessageEmbed) {
-        let perms = message.member.hasPermission("BAN_MEMBERS") //Verificamos permisos del user
-        if (!perms) return message.channel.send("X | Usted no tiene permisos")
+        let perms = message.member.hasPermission("ADMINISTRATOR") //Verificamos permisos del user
+        if (!perms) return message.channel.send(":x: | Only the **ADMINISTRATOR** can regenerate the server invitation")
       let selectedchannel = message.mentions.channels.first() || message.channel;
 
         let invite = await selectedchannel.createInvite({ maxAge: 0, maxUses: 0 }).catch(() => {});
