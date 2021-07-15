@@ -5,6 +5,9 @@ const { renderTemplate } = require('@structures/middleware');
 
 const route = Router();
 
+const vanityRoute = require('@routes/vanity');
+route.use(vanityRoute);
+
 const servers = require("@routes/serversroutes");
 route.use("/server", servers);
 
@@ -46,9 +49,6 @@ route.get("/privacy", async (req, res, next) => {
 route.get("/markdown", async (req, res, next) => {
     renderTemplate(res, req, 'markdown');
 });
-
-const vanityroutes = require("@routes/vanity");
-route.use("/", vanityroutes);
 
 Array.prototype.shuffle = function () {
     let a = this;

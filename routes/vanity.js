@@ -6,10 +6,12 @@ const { renderTemplate } = require('@structures/middleware');
 const route = Router();
 
 route.get('/:vanity', async (req, res, next) => {
-    if(req.headers.host == process.env.DOMAIN.toString().replace(/(http(s?)):\/\//i, '')) return next();
+  console.log('vanity hits', req.params.vanity);
+    // if(req.headers.host == process.env.DOMAIN.toString().replace(/(http(s?)):\/\//i, '')) return next();
     const vanityuri = req.params.vanity;
 
     let server = await Servers.findOne({ "vanity.code": vanityuri }, { _id: false })
+    console.log(server);
     if(!server) return res.redirect(process.env.DOMAIN)
     if(server.vanity.action == "join") {
       return res.redirect(process.env.DOMAIN + "/server/" + server.guildid + "/join")
