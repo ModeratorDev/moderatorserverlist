@@ -39,9 +39,7 @@ class BumpCMD extends Command {
     }
 }
 
-// 
-
-fuyou can put this function in some kind of utils.js filection getTimeRemaining(endtime) {
+function getTimeRemaining(endtime) {
   const total = Date.parse(new Date()) - Date.parse(endtime);
   const seconds = Math.floor((total / 1000) % 60);
   const minutes = Math.floor((total / 1000 / 60) % 60);
