@@ -12,7 +12,8 @@ route.get('/:vanity', async (req, res, next) => {
 
     let server = await Servers.findOne({ "vanity.code": vanityuri }, { _id: false })
     // console.log(server);
-    if(!server) return res.redirect(process.env.DOMAIN)
+    // if(!server) return res.redirect(process.env.DOMAIN)
+    if(!server) return next();
     if(server.vanity.action == "join") {
       return res.redirect(process.env.DOMAIN + "/server/" + server.guildid + "/join")
     }
