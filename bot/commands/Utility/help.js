@@ -52,7 +52,7 @@ class HelpCMD extends Command {
 
       embed
       	.setTitle(`Moderator Servers » Help`)
-        .setDescription(`Soy un bot: Moderator Servers (https://moderatorservers.glitch.me/) :robot:`)
+        .setDescription(`Soy un bot: Moderator Servers (https://moderatorservers.gq/) :robot:`)
         .addField('Commands', output.join('\n'))
       message.channel.send(embed);
     } else {
@@ -64,7 +64,7 @@ class HelpCMD extends Command {
         });
         embed
         	.setTitle(`Moderator Servers » Help (Developers)`)
-          .setDescription(`I'm a bot: Moderator Servers (https://moderatorservers.glitch.me/) :robot:`)
+          .setDescription(`I'm a bot: Moderator Servers (https://moderatorservers.gq/) :robot:`)
           .addField('Commands', output.join('\n'))
         message.channel.send(embed);
       }

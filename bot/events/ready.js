@@ -43,7 +43,7 @@ module.exports = class extends Event {
 
     function setActivity() {
       //client.user.setActivity(, {type: "WATCHING", status: "dnd"});
-	    client.user.setPresence({ status: 'dnd', activity: { name: `over ${client.guilds.cache.size} servers | a!help | https://moderatorservers.glitch.me/`, type: 'WATCHING'}})
+	    client.user.setPresence({ status: 'dnd', activity: { name: `over ${client.guilds.cache.size} servers | a!help | https://moderatorservers.gq/`, type: 'WATCHING'}})
       // client.user.setPresence({ status: 'dnd', activity: { name: `my developers build me! (Coming soon)`, type: 'WATCHING'}})
     };
 

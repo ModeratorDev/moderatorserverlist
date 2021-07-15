@@ -35,7 +35,7 @@ class BumpCMD extends Command {
         
         embed.setDescription(`${message.author},
          Bump done :thumbsup:
-         Check it in the [Server List](https://moderatorservers.glitch.me/)`)
+         Check it in the [Server List](https://moderatorservers.gq/)`)
                  .setImage("https://media.discordapp.net/attachments/839881374201937930/865213828068671488/Sin_titulo.jpg?width=712&height=401")
 
         message.channel.send(embed);

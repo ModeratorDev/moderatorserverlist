@@ -133,7 +133,7 @@ class InfoCMD extends Command {
             .addField(`Members [${infoGuild.memberCount}/${infoGuild.maximumMembers}]`, `🧍 ${infoGuild.members.cache.filter(m => !m.user.bot).size} | 🤖 ${infoGuild.members.cache.filter(m => m.user.bot).size} | <a:serverbooster:768156347036074034> ${infoGuild.premiumSubscriptionCount}`, true)
             .addField(`Channels [${infoGuild.channels.cache.size}]`, `⌨️ ${infoGuild.channels.cache.filter(c => c.type == "text").size} | 🔈 ${infoGuild.channels.cache.filter(c => c.type == "voice").size} | 📁 ${infoGuild.channels.cache.filter(c => c.type == "category").size} | 📢 ${infoGuild.channels.cache.filter(c => c.type == "news").size}`, true)
             .addField('\u200b', '\u200b', true)
-            .addField(`Vanity`, dbInfo.vanity.code ? `https://moderatorservers.glitch.me/${dbInfo.vanity.code}` : "Not set", true)
+            .addField(`Vanity`, dbInfo.vanity.code ? `https://moderatorservers.gq/${dbInfo.vanity.code}` : "Not set", true)
             .addField(`Boost Level`, `${infoGuild.premiumTier}`, true)
             // .addField('AFK Channel', `${(infoGuild.afkChannel && infoGuild.afkChannel.name) || "Not Set"}`, true)
             // .addField(`Roles (${infoGuild.roles.cache.size.toLocaleString()})`, roles1
