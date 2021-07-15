@@ -20,19 +20,21 @@ class BumpCMD extends Command {
             .setTitle(`Moderator Servers » Bump`)
         let server = await Servers.findOne({guildid: message.guild.id}, { _id: false })
         if(!server) { 
-            embed.setDescription('Se produjo un error, comuníquese con un administrador del sitio.')
+            embed.setDescription('An error occurred, contact a site administrator.')
             return message.channel.send(embed);
         }
         
         const timeremain = getTimeRemaining(server.lastbumped)
 		      if(timeremain.days == 0) 
             if(timeremain.hours < 2) {
-                embed.setDescription(`Too early! Please come back \n${1-timeremain.hours} hours, ${59-timeremain.minutes} minutes, ${60-timeremain.seconds} seconds.`)
+                embed.setDescription(`${message.author}, Too early! Please come back in \n${1-timeremain.hours} hours, ${59-timeremain.minutes} minutes, ${60-timeremain.seconds} seconds.`)
                 return message.channel.send(embed)
             }
         await Servers.updateOne({ guildid: server.guildid }, {$set: { lastbumped: new Date(Date.parse(new Date())) } })
         
-        embed.setDescription('Bump successfully!')
+        embed.setDescription(`${message.author},
+         Bump done :thumbsup:
+         Check it in the [Server List](https://moderatorservers.glitch.me/)`)
                  .setImage("https://media.discordapp.net/attachments/839881374201937930/865213828068671488/Sin_titulo.jpg?width=712&height=401")
 
         message.channel.send(embed);
