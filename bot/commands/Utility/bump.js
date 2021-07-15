@@ -28,7 +28,8 @@ class BumpCMD extends Command {
 		      if(timeremain.days == 0) 
             if(timeremain.hours < 2) {
                 embed.setDescription(`${message.author}, Too early! Please come back in \n${1-timeremain.hours} hours, ${59-timeremain.minutes} minutes, ${60-timeremain.seconds} seconds.`)
-                return message.channel.send(embed)
+                  .setThumbnail("https://media.discordapp.net/attachments/863210856304345118/865247921661804544/unknown.png?width=401&height=401")  
+              return message.channel.send(embed)
             }
         await Servers.updateOne({ guildid: server.guildid }, {$set: { lastbumped: new Date(Date.parse(new Date())) } })
         
