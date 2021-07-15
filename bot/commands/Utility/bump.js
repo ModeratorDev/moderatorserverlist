@@ -18,7 +18,6 @@ class BumpCMD extends Command {
           .setColor('PURPLE')
           .setFooter(message.author.username, message.author.avatarURL())
             .setTitle(`Moderator Servers » Bump`)
-        
         let server = await Servers.findOne({guildid: message.guild.id}, { _id: false })
         if(!server) { 
             embed.setDescription('Se produjo un error, comuníquese con un administrador del sitio.')
@@ -34,11 +33,15 @@ class BumpCMD extends Command {
         await Servers.updateOne({ guildid: server.guildid }, {$set: { lastbumped: new Date(Date.parse(new Date())) } })
         
         embed.setDescription('Bump successfully!')
+                 .setImage("https://media.discordapp.net/attachments/839881374201937930/865213828068671488/Sin_titulo.jpg?width=712&height=401")
+
         message.channel.send(embed);
     }
 }
 
-function getTimeRemaining(endtime) {
+// 
+
+fuyou can put this function in some kind of utils.js filection getTimeRemaining(endtime) {
   const total = Date.parse(new Date()) - Date.parse(endtime);
   const seconds = Math.floor((total / 1000) % 60);
   const minutes = Math.floor((total / 1000 / 60) % 60);
