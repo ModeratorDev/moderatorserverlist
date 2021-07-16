@@ -45,8 +45,8 @@ if (cards.length === 0) { %>
   <div class="card">
   <div class="card-block">
     <% if (bot.guilds.cache.get(i.guildid).icon) { %>
-      <img class="card-img-top stillimg" src="<%= `${bot.guilds.cache.get(i.guildid).iconURL({format: 'png', size: 128 })}` %>" width="50px" style="width:128px; height:128px; background-color:#1E201D; border-radius:50%;" alt="">
-      <img class="card-img-top dynimg" src="<%= `${bot.guilds.cache.get(i.guildid).iconURL({format: 'png', dynamic: true, size: 128 })}` %>" width="50px" style="display:none; width:128px; height:128px; background-color:#1E201D; border-radius:50%;" alt="">
+      <img class="card-img-top stillimg" src="<%= `${bot.guilds.cache.get(i.guildid).iconURL({format: 'png', size: 128 })}` %>" width="50px" style="width:128px; height:128px; background-color:#F6F6F6; border-radius:50%;" alt="">
+      <img class="card-img-top dynimg" src="<%= `${bot.guilds.cache.get(i.guildid).iconURL({format: 'png', dynamic: true, size: 128 })}` %>" width="50px" style="display:none; width:128px; height:128px; background-color:#F6F6F6; border-radius:50%;" alt="">
     <% } else { %>
       <canvas class="card-img-top" id="<%= bot.guilds.cache.get(i.guildid).name.split(' ').join('').replace(`'`, ``) %>" width="50px" style="width:128px; height:128px; background-color:#7289da; border-radius:50%;" height="50px"></canvas>
       <script>
@@ -92,7 +92,7 @@ if (cards.length === 0) { %>
 <div class="card">
 <div class="card-block">
   <% if (bot.guilds.cache.get(i.guildid).icon) { %>
-    <img class="card-img-top" src="<%= `${bot.guilds.cache.get(i.guildid).iconURL({format: 'png', size: 128 })}` %>" width="50px" style="width:128px; height:128px; background-color:#1E201D; border-radius:50%;" alt="">
+    <img class="card-img-top" src="<%= `${bot.guilds.cache.get(i.guildid).iconURL({format: 'png', size: 128 })}` %>" width="50px" style="width:128px; height:128px; background-color:#F6F6F6; border-radius:50%;" alt="">
   <% } else { %>
     <canvas class="card-img-top" id="<%= bot.guilds.cache.get(i.guildid).name.split(' ').join('').replace(`'`, ``) %>1" width="50px" style="width:128px; height:128px; background-color:#7289da; border-radius:50%;" height="50px"></canvas>
     <script>
@@ -139,7 +139,7 @@ if (cards.length === 0) { %>
 <div class="card">
 <div class="card-block">
   <% if (bot.guilds.cache.get(i.guildid).icon) { %>
-    <img class="card-img-top" src="<%= `${bot.guilds.cache.get(i.guildid).iconURL({format: 'png', size: 128 })}` %>" width="50px" style="width:128px; height:128px; background-color:#1E201D; border-radius:50%;" alt="">
+    <img class="card-img-top" src="<%= `${bot.guilds.cache.get(i.guildid).iconURL({format: 'png', size: 128 })}` %>" width="50px" style="width:128px; height:128px; background-color:#F6F6F6; border-radius:50%;" alt="">
   <% } else { %>
     <canvas class="card-img-top" id="<%= bot.guilds.cache.get(i.guildid).name.split(' ').join('').replace(`'`, ``) %>2" width="50px" style="width:128px; height:128px; background-color:#7289da; border-radius:50%;" height="50px"></canvas>
     <script>
