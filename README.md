@@ -1,4 +1,4 @@
-# moderatorserverlist
+# Moderatorserverlist
 Hello, I have created this server list for you, I hope you like it and share it.
 
 Creator
